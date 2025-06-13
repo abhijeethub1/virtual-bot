@@ -14,6 +14,10 @@ from sentence_transformers import SentenceTransformer
 import faiss
 from openai import OpenAI
 import logging
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv('/app/backend/.env')
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -26,7 +30,11 @@ class IndexBuilder:
         self.storage_dir.mkdir(exist_ok=True)
         
         # Initialize OpenAI client
-        self.openai_client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key:
+            raise ValueError("OPENAI_API_KEY environment variable not set")
+        
+        self.openai_client = OpenAI(api_key=api_key)
         
         # Initialize sentence transformer for backup embeddings
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
