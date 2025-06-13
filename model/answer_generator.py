@@ -220,17 +220,25 @@ Context from course materials and discussions:
 Please provide a helpful answer based on the context above. Be specific and practical in your response."""
 
             # Generate answer using OpenAI
-            response = self.openai_client.chat.completions.create(
-                model="gpt-3.5-turbo-0125",
-                messages=[
-                    {"role": "system", "content": system_prompt},
-                    {"role": "user", "content": user_prompt}
-                ],
-                max_tokens=500,
-                temperature=0.1
-            )
-            
-            answer = response.choices[0].message.content
+            if self.openai_client is None:
+                # Fallback response when OpenAI is not available
+                answer = f"""I'm currently unable to generate a full AI response, but based on the course materials, here's what I can tell you about your question: "{question}"
+
+From the available context:
+{context_text[:500]}...
+
+For more detailed assistance, please check the course materials or contact the teaching staff directly."""
+            else:
+                response = self.openai_client.chat.completions.create(
+                    model="gpt-3.5-turbo-0125",
+                    messages=[
+                        {"role": "system", "content": system_prompt},
+                        {"role": "user", "content": user_prompt}
+                    ],
+                    max_tokens=500,
+                    temperature=0.1
+                )
+                answer = response.choices[0].message.content
             
             # Extract relevant discourse links
             links = self.extract_discourse_links(context_docs)
