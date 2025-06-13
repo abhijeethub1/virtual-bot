@@ -145,6 +145,9 @@ class AnswerGenerator:
     
     def process_image(self, image_base64: str) -> str:
         """Process base64 image and extract text description using OpenAI Vision"""
+        if self.openai_client is None:
+            return "Image processing not available (OpenAI API key not configured)."
+            
         try:
             # Decode base64 image
             image_data = base64.b64decode(image_base64)
