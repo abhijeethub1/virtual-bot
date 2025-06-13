@@ -1,0 +1,5 @@
+{
+  "embedding_dimension": 384,
+  "total_documents": 51,
+  "index_type": "IndexFlatIP"
+}
