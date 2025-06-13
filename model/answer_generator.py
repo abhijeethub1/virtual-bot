@@ -18,6 +18,10 @@ import re
 from PIL import Image
 import base64
 import io
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv('/app/backend/.env')
 
 # Setup logging
 logging.basicConfig(level=logging.INFO)
@@ -26,7 +30,15 @@ logger = logging.getLogger(__name__)
 class AnswerGenerator:
     def __init__(self, storage_dir: str = "/app/storage"):
         self.storage_dir = Path(storage_dir)
-        self.openai_client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
+        
+        # Initialize OpenAI client
+        api_key = os.getenv('OPENAI_API_KEY')
+        if not api_key:
+            logger.error("OPENAI_API_KEY environment variable not set")
+            self.openai_client = None
+        else:
+            self.openai_client = OpenAI(api_key=api_key)
+        
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
         
         # Load index and documents
