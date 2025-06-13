@@ -75,6 +75,12 @@ class AnswerGenerator:
     
     def encode_question(self, question: str) -> np.ndarray:
         """Encode question into embedding vector"""
+        if self.openai_client is None:
+            logger.warning("OpenAI client not available, using sentence transformer")
+            embedding = self.embedding_model.encode([question])
+            embedding = embedding / np.linalg.norm(embedding, axis=1, keepdims=True)
+            return embedding
+            
         try:
             response = self.openai_client.embeddings.create(
                 model="text-embedding-3-small",
