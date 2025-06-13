@@ -1,0 +1,126 @@
+[
+  {
+    "id": 155939,
+    "title": "GA5 Question 8 Clarification",
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/ga5-question-8-clarification/155939",
+    "category": "TDS",
+    "posts": [
+      {
+        "post_number": 1,
+        "content": "Hi everyone, I'm confused about Question 8 in GA5. The question asks about using GPT models but the AI proxy only supports gpt-4o-mini. Should I use that or stick to the specified model?",
+        "author": "student_user1",
+        "created_at": "2025-01-15T10:30:00Z"
+      },
+      {
+        "post_number": 2,
+        "content": "I have the same question! The assignment specifically mentions gpt-3.5-turbo-0125 but the proxy doesn't have it.",
+        "author": "student_user2",
+        "created_at": "2025-01-15T11:15:00Z"
+      },
+      {
+        "post_number": 3,
+        "content": "My understanding is that you just have to use a tokenizer, similar to what Prof. Anand used, to get the number of tokens and multiply that by the given rate.",
+        "author": "ta_helper1",
+        "created_at": "2025-01-15T14:20:00Z"
+      },
+      {
+        "post_number": 4,
+        "content": "Use the model that's mentioned in the question. You must use gpt-3.5-turbo-0125, even if the AI Proxy only supports gpt-4o-mini. Use the OpenAI API directly for this question.",
+        "author": "prof_anand",
+        "created_at": "2025-01-15T16:45:00Z"
+      }
+    ]
+  },
+  {
+    "id": 156234,
+    "title": "Week 3 Assignment - Data Cleaning Issues",
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/week-3-assignment-data-cleaning-issues/156234",
+    "category": "TDS",
+    "posts": [
+      {
+        "post_number": 1,
+        "content": "I'm having trouble with the data cleaning assignment. There are missing values in multiple columns and I'm not sure which imputation method to use.",
+        "author": "student_user3",
+        "created_at": "2025-02-01T09:00:00Z"
+      },
+      {
+        "post_number": 2,
+        "content": "For numerical columns, try median imputation first. For categorical, use mode. But check the missingness pattern first.",
+        "author": "ta_helper2",
+        "created_at": "2025-02-01T10:30:00Z"
+      },
+      {
+        "post_number": 3,
+        "content": "Remember to document why you chose each method. The choice depends on whether the data is MCAR, MAR, or MNAR.",
+        "author": "ta_helper1",
+        "created_at": "2025-02-01T11:00:00Z"
+      }
+    ]
+  },
+  {
+    "id": 157128,
+    "title": "Visualization Best Practices Question",
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/visualization-best-practices-question/157128",
+    "category": "TDS",
+    "posts": [
+      {
+        "post_number": 1,
+        "content": "What are the key principles for creating effective data visualizations in our assignments?",
+        "author": "student_user4",
+        "created_at": "2025-02-15T14:30:00Z"
+      },
+      {
+        "post_number": 2,
+        "content": "Focus on clarity and purpose. Choose the right chart type, use clear labels, and avoid unnecessary decorations. Prof. Anand emphasized this in Week 4 lectures.",
+        "author": "ta_helper2",
+        "created_at": "2025-02-15T15:15:00Z"
+      }
+    ]
+  },
+  {
+    "id": 158445,
+    "title": "Machine Learning Model Selection Help",
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/machine-learning-model-selection-help/158445",
+    "category": "TDS",
+    "posts": [
+      {
+        "post_number": 1,
+        "content": "For the ML assignment, how do I choose between different algorithms? Should I try all of them?",
+        "author": "student_user5",
+        "created_at": "2025-03-01T11:00:00Z"
+      },
+      {
+        "post_number": 2,
+        "content": "Start with simple models like linear/logistic regression as baselines. Then try more complex ones. Use cross-validation to compare performance objectively.",
+        "author": "ta_helper1",
+        "created_at": "2025-03-01T12:30:00Z"
+      },
+      {
+        "post_number": 3,
+        "content": "Don't forget to consider interpretability vs. performance trade-offs. Document your model selection process.",
+        "author": "prof_anand",
+        "created_at": "2025-03-01T16:20:00Z"
+      }
+    ]
+  },
+  {
+    "id": 159872,
+    "title": "Big Data Tools - Spark Configuration",
+    "url": "https://discourse.onlinedegree.iitm.ac.in/t/big-data-tools-spark-configuration/159872",
+    "category": "TDS",
+    "posts": [
+      {
+        "post_number": 1,
+        "content": "I'm getting memory errors when running PySpark on large datasets. Any configuration tips?",
+        "author": "student_user6",
+        "created_at": "2025-03-20T10:15:00Z"
+      },
+      {
+        "post_number": 2,
+        "content": "Try increasing driver and executor memory. Also consider partitioning your data appropriately. Use spark.sql.adaptive.enabled=true for better resource utilization.",
+        "author": "ta_helper2",
+        "created_at": "2025-03-20T11:45:00Z"
+      }
+    ]
+  }
+]

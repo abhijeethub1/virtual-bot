@@ -1,0 +1,153 @@
+Tools in Data Science Course Content
+
+Week 1: Introduction to Data Science Tools
+Data science is a multidisciplinary field that uses scientific methods, processes, algorithms and systems to extract knowledge and insights from structured and unstructured data. The key tools include Python, R, SQL, and various libraries.
+
+Python Basics:
+- Python is a high-level programming language widely used in data science
+- Key libraries: pandas, numpy, matplotlib, seaborn, scikit-learn
+- Installation: Use anaconda or pip package manager
+- Jupyter notebooks are commonly used for interactive development
+
+SQL Fundamentals:
+- Structured Query Language for database operations
+- Essential commands: SELECT, INSERT, UPDATE, DELETE
+- Joins: INNER, LEFT, RIGHT, FULL OUTER
+- Aggregation functions: COUNT, SUM, AVG, MAX, MIN
+
+Week 2: Data Collection and Web Scraping
+Data collection methods include APIs, web scraping, databases, and file imports.
+
+Web Scraping:
+- BeautifulSoup library for HTML parsing
+- Requests library for HTTP requests
+- Ethics and legal considerations
+- Rate limiting and respectful scraping
+
+APIs:
+- REST API fundamentals
+- JSON data format
+- Authentication methods: API keys, OAuth
+- Python requests library for API calls
+
+Week 3: Data Preprocessing and Cleaning
+Data cleaning is crucial for accurate analysis.
+
+Common Data Issues:
+- Missing values: handle with imputation or removal
+- Duplicates: identify and remove
+- Outliers: detect using statistical methods
+- Data type inconsistencies
+
+Pandas Operations:
+- DataFrame manipulation
+- Filtering and selection
+- Groupby operations
+- Merging and joining datasets
+
+Week 4: Exploratory Data Analysis (EDA)
+EDA helps understand data patterns and relationships.
+
+Visualization Tools:
+- Matplotlib for basic plots
+- Seaborn for statistical visualizations
+- Plotly for interactive charts
+- Types: histograms, scatter plots, box plots, heatmaps
+
+Statistical Analysis:
+- Descriptive statistics
+- Correlation analysis
+- Distribution analysis
+- Hypothesis testing basics
+
+Week 5: Machine Learning Fundamentals
+Introduction to machine learning concepts and algorithms.
+
+Supervised Learning:
+- Regression: Linear, Polynomial, Ridge, Lasso
+- Classification: Logistic Regression, Decision Trees, Random Forest
+- Model evaluation: train-test split, cross-validation
+- Metrics: accuracy, precision, recall, F1-score, R-squared
+
+Unsupervised Learning:
+- Clustering: K-means, Hierarchical
+- Dimensionality reduction: PCA, t-SNE
+- Association rules
+
+Week 6: Advanced Analytics
+Advanced techniques for complex data analysis.
+
+Time Series Analysis:
+- Trend and seasonality
+- ARIMA models
+- Forecasting techniques
+
+Natural Language Processing:
+- Text preprocessing
+- Tokenization and stemming
+- Sentiment analysis
+- Word embeddings
+
+Week 7: Big Data Tools
+Handling large datasets efficiently.
+
+Apache Spark:
+- Distributed computing framework
+- PySpark for Python integration
+- DataFrames and RDDs
+- Cluster computing
+
+Database Technologies:
+- NoSQL databases: MongoDB, Cassandra
+- Data warehousing concepts
+- ETL processes
+
+Week 8: Deployment and Production
+Moving models from development to production.
+
+Model Deployment:
+- Flask/FastAPI for web services
+- Docker for containerization
+- Cloud platforms: AWS, Azure, GCP
+- API development and documentation
+
+Best Practices:
+- Version control with Git
+- Code documentation
+- Testing strategies
+- Monitoring and maintenance
+
+Assignment Guidelines and Common Questions:
+
+Q1: Which AI model should I use for the course assignments?
+A: For the TDS course assignments, you must use gpt-3.5-turbo-0125 as specified in the assignment requirements, even if other models like gpt-4o-mini are available through AI proxies. This ensures consistency in evaluation.
+
+Q2: How do I handle token counting for API usage?
+A: Use a tokenizer similar to what Prof. Anand demonstrated in lectures. Count the tokens in your input text and multiply by the given rate to calculate costs. The tiktoken library is recommended for OpenAI models.
+
+Q3: What's the difference between different evaluation methods?
+A: The course covers multiple evaluation approaches:
+- Holdout validation (train-test split)
+- Cross-validation (k-fold)
+- Time series split for temporal data
+- Stratified sampling for imbalanced datasets
+
+Q4: How to handle missing data in assignments?
+A: Follow the three-step approach:
+1. Identify the type of missingness (MCAR, MAR, MNAR)
+2. Choose appropriate handling method (deletion, imputation, or modeling)
+3. Document your decision and its impact on results
+
+Q5: Best practices for data visualization?
+A: Follow these guidelines:
+- Choose appropriate chart types for your data
+- Use clear labels and titles
+- Consider color accessibility
+- Avoid chart junk and unnecessary decorations
+- Tell a story with your visualizations
+
+Common Errors and Solutions:
+- ImportError: Install required packages using pip or conda
+- Memory errors: Use chunking or sampling for large datasets
+- Convergence issues: Check data scaling and algorithm parameters
+- Validation errors: Ensure proper data splitting and preprocessing
